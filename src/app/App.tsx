@@ -1,6 +1,10 @@
+import Layout from "../layout/Layout";
+
 const App = () => {
-  return (
-    <div className="bg-red-600">App</div>
-  )
-}
-export default App
+	return (
+		<>
+			<Layout />
+		</>
+	);
+};
+export default App;
