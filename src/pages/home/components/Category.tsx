@@ -8,10 +8,12 @@ import slider_img_02 from "../../../assets/home/slide2.jpg";
 import slider_img_03 from "../../../assets/home/slide3.jpg";
 import slider_img_04 from "../../../assets/home/slide4.jpg";
 import slider_img_05 from "../../../assets/home/slide5.jpg";
+import SectionHeading from "../../../components/shared/SectionHeading";
 
 const Category = () => {
 	return (
 		<section className="my-20 select-none">
+			<SectionHeading subHeading="From 11:00am to 10:00pm" heading="order online"/>
 			<Swiper
 				slidesPerView={4}
 				spaceBetween={30}
