@@ -29,8 +29,8 @@ const NavComponent = () => {
 	));
 
 	return (
-		<nav className="bg-black/70 py-4 px-4 fixed top-0 w-full z-10">
-			<div className="container mx-auto flex items-center justify-between">
+		<nav className="bg-black/70 py-4 fixed top-0 w-full z-10">
+			<div className="container mx-auto px-4 flex items-center justify-between">
 				<Link to="/" className="flex flex-col select-none">
 					<h1 className="text-white uppercase font-cinzel font-black text-2xl lg:text-3xl 2xl:text-4xl">
 						BISTRO BOSS
