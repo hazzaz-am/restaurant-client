@@ -29,7 +29,7 @@ const NavComponent = () => {
 	));
 
 	return (
-		<nav className="bg-black/50 py-4 px-4 fixed top-0 w-full">
+		<nav className="bg-black/70 py-4 px-4 fixed top-0 w-full z-10">
 			<div className="container mx-auto flex items-center justify-between">
 				<Link to="/" className="flex flex-col">
 					<h1 className="text-white uppercase font-cinzel font-black text-2xl lg:text-3xl 2xl:text-4xl">
@@ -68,7 +68,7 @@ const NavComponent = () => {
 			</div>
 			{showMenus && (
 				<menu
-					className={`lg:hidden flex flex-col gap-4 fixed top-0 right-0 text-white bg-black/80 min-h-screen py-8 px-5 transition-[0.5s] w-0 ${
+					className={`lg:hidden flex flex-col gap-4 fixed top-0 right-0 text-white bg-black/90 min-h-screen py-8 px-5 transition-[0.5s] w-0 z-20 ${
 						showMenus ? "w-60" : "w-0"
 					}`}
 				>

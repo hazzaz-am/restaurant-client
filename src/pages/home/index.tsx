@@ -1,6 +1,10 @@
+import Banner from "./components/Banner"
+
 const HomePage = () => {
   return (
-    <div className="min-h-screen">HomePage</div>
+    <section>
+      <Banner/>
+    </section>
   )
 }
 export default HomePage
