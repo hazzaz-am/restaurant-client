@@ -10,26 +10,28 @@ import banner_img_06 from '../../../assets/home/06.png'
 
 const Banner = () => {
 	return (
-		<Carousel showArrows={false} autoPlay={true}>
-			<div>
-				<img src={banner_img_01} />
-			</div>
-			<div>
-				<img src={banner_img_02} />
-			</div>
-			<div>
-				<img src={banner_img_03} />
-			</div>
-			<div>
-				<img src={banner_img_04} />
-			</div>
-			<div>
-				<img src={banner_img_05} />
-			</div>
-			<div>
-				<img src={banner_img_06} />
-			</div>
-		</Carousel>
+		<section className="select-none">
+			<Carousel showArrows={false} autoPlay={true}>
+				<div>
+					<img src={banner_img_01} />
+				</div>
+				<div>
+					<img src={banner_img_02} />
+				</div>
+				<div>
+					<img src={banner_img_03} />
+				</div>
+				<div>
+					<img src={banner_img_04} />
+				</div>
+				<div>
+					<img src={banner_img_05} />
+				</div>
+				<div>
+					<img src={banner_img_06} />
+				</div>
+			</Carousel>
+		</section>
 	);
 };
 export default Banner;
