@@ -7,7 +7,7 @@ import cart_icon from "../../assets/icon/151-1511569_cart-notifications-free-sho
 import { publicRoutes } from "../../utils/publicRoutes";
 
 const NavComponent = () => {
-	const [showMenus, setShowMenus] = useState(true);
+	const [showMenus, setShowMenus] = useState(false);
 	const user = true;
 
 
