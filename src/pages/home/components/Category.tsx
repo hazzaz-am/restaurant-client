@@ -24,31 +24,31 @@ const Category = () => {
 			>
 				<SwiperSlide>
 					<img src={slider_img_01} alt="fresh_salad" />
-					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white">
+					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)] leading-snug font-medium">
 						salads
 					</h4>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={slider_img_02} alt="pizzas" />
-					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white">
+					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white  [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)] leading-snug font-medium">
 						pizza
 					</h4>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={slider_img_03} alt="soups" />
-					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white">
+					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white  [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)] leading-snug font-medium">
 						soups
 					</h4>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={slider_img_04} alt="cakes" />
-					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white">
+					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white  [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)] leading-snug font-medium">
 						cakes
 					</h4>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={slider_img_05} alt="salads" />
-					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white">
+					<h4 className="font-cinzel text-xs  md:text-2xl 2xl:text-3xl text-center -mt-4 md:-mt-14 text-white  [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)] leading-snug font-medium">
 						salads
 					</h4>
 				</SwiperSlide>
