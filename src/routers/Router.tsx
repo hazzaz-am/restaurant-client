@@ -1,6 +1,11 @@
 import { createBrowserRouter } from "react-router";
 import App from "../app/App";
 import HomePage from "../pages/home";
+import ContactPage from "../pages/contact-us";
+import MenuPage from "../pages/our-menu";
+import ShopPage from "../pages/our-shop";
+import SignInPage from "../pages/auth/sign-in";
+import RegistrationPage from "../pages/auth/register";
 
 
 export const router = createBrowserRouter([
@@ -14,23 +19,23 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact-us",
-        element: <HomePage/>
+        element: <ContactPage/>
       },
       {
         path: "/our-menu",
-        element: <HomePage/>
+        element: <MenuPage/>
       },
       {
         path: "/our-shop",
-        element: <HomePage/>
+        element: <ShopPage/>
       },
       {
         path: "/sign-in",
-        element: <HomePage/>
+        element: <SignInPage/>
       },
       {
-        path: "/register",
-        element: <HomePage/>
+        path: "/registration",
+        element: <RegistrationPage/>
       },
     ]
 	},
