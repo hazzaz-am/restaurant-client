@@ -27,7 +27,7 @@ const PopularMenus = () => {
 	}, []);
 
 	return (
-		<div className="container px-4 mx-auto mb-32">
+		<section className="container px-4 mx-auto mb-32">
 			<SectionHeading
 				subHeading="Check out popular items"
 				heading="from our menu"
@@ -51,7 +51,7 @@ const PopularMenus = () => {
 					View Full Menu
 				</Link>
 			</div>
-		</div>
+		</section>
 	);
 };
 export default PopularMenus;

@@ -2,7 +2,7 @@ import bg_img from "../../../assets/home/chef-service.jpg";
 
 const ChefService = () => {
   return (
-		<div className="container mx-auto px-4 mb-20">
+		<section className="container mx-auto px-4 mb-20">
 			<div
 				style={{ backgroundImage: `url(${bg_img})` }}
 				className="bg-center bg-cover bg-no-repeat p-10 lg:py-28 lg:px-28"
@@ -17,7 +17,7 @@ const ChefService = () => {
 					</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 export default ChefService
