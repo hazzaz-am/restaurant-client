@@ -1,11 +1,6 @@
-type MenuItemProps = {
-	img: string;
-	name: string;
-	recipe: string;
-	price: number;
-};
+import { type ItemType } from "../../types/types";
 
-const MenuItem = ({ img, name, recipe, price }: MenuItemProps) => {
+const MenuItem = ({ img, name, recipe, price }: ItemType) => {
 	return (
 		<div className="flex flex-col lg:flex-row gap-4">
 			<img

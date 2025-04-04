@@ -1,26 +1,19 @@
 import { useEffect, useState } from "react";
 import SectionHeading from "../../../components/shared/SectionHeading";
 import MenuItem from "../../../components/shared/MenuItem";
-import { Link } from "react-router";
+import type { MenuItemType } from "../../../types/types";
+import PrimaryButton from "../../../components/ui/PrimaryButton";
 
-type MenuItem = {
-	_id: string;
-	name: string;
-	recipe: string;
-	image: string;
-	category: string;
-	price: number;
-};
 
 const PopularMenus = () => {
-	const [menus, setMenus] = useState<MenuItem[]>([]);
+	const [menus, setMenus] = useState<MenuItemType[]>([]);
 
 	useEffect(() => {
 		fetch("/menu.json")
 			.then((res) => res.json())
 			.then((menu) => {
 				const popularMenu = menu.filter(
-					(item: MenuItem) => item.category === "popular"
+					(item: MenuItemType) => item.category === "popular"
 				);
 				setMenus(popularMenu);
 			});
@@ -44,12 +37,7 @@ const PopularMenus = () => {
 				))}
 			</div>
 			<div className="text-center">
-				<Link
-					to="/our-menu"
-					className="uppercase py-5 px-[30px] text-[#1F2937] text-sm md:text-xl border-b-2 rounded-md cursor-pointer"
-				>
-					View Full Menu
-				</Link>
+				<PrimaryButton path="/our-menu">View Full Menu</PrimaryButton>
 			</div>
 		</section>
 	);
