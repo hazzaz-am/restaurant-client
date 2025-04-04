@@ -5,7 +5,7 @@ const ChefService = () => {
 		<section className="container mx-auto px-4 mb-20">
 			<div
 				style={{ backgroundImage: `url(${bg_img})` }}
-				className="bg-center bg-cover bg-no-repeat p-10 lg:py-28 lg:px-28"
+				className="bg-center bg-cover bg-no-repeat p-10 lg:py-28 lg:px-28 bg-fixed"
 			>
 				<div className="p-5 lg:py-24 lg:px-32 bg-white text-center">
 					<h2 className="uppercase font-cinzel font-normal text-xl md:text-2xl lg:text-3xl 2xl:text-[45px]">bistro boss</h2>
