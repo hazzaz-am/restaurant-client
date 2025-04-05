@@ -29,13 +29,13 @@ const NavComponent = () => {
 	));
 
 	return (
-		<nav className="bg-black/70 py-4 fixed top-0 w-full z-10">
+		<nav className="bg-black/70 py-1 md:py-4 fixed top-0 w-full z-10">
 			<div className="container mx-auto px-4 flex items-center justify-between">
 				<Link to="/" className="flex flex-col select-none">
-					<h1 className="text-white uppercase font-cinzel font-black text-2xl lg:text-3xl 2xl:text-4xl">
+					<h1 className="text-white uppercase font-cinzel font-black md:text-2xl lg:text-3xl 2xl:text-4xl tracking-[0.1rem]">
 						BISTRO BOSS
 					</h1>
-					<h2 className="text-white capitalize font-cinzel font-bold text-xl lg:text-2xl 2xl:text-3xl tracking-tightest">
+					<h2 className="text-white capitalize font-cinzel font-bold md:text-xl lg:text-2xl 2xl:text-3xl tracking-small md:tracking-tightest">
 						Restaurant
 					</h2>
 				</Link>

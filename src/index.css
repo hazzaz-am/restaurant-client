@@ -11,6 +11,7 @@
 	--font-cinzel: "Cinzel", serif;
 	--font-raleway: "Raleway", sans-serif;
 	--tracking-tightest: 0.4rem;
+	--tracking-small: 0.2rem;
 }
 
 .carousel {
