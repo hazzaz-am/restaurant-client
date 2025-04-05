@@ -17,7 +17,7 @@ export const publicRoutes: RouteType[] = [
 		name: "our menu",
 	},
 	{
-		url: "/our-shop",
+		url: "/our-shop/salad",
 		name: "our shop",
 	},
 ];

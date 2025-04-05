@@ -1,6 +1,6 @@
 import { useFetchMenus } from "../../../hooks/useFetchMenus";
 import MenusSection from "./MenusSection";
-import SectionCover from "./SectionCover";
+import SectionCover from "../../../components/shared/SectionCover";
 
 import pizza_img from '../../../assets/menu/pizza-bg.jpg'
 

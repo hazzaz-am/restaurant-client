@@ -1,4 +1,4 @@
-import SectionCover from "./SectionCover";
+import SectionCover from "../../../components/shared/SectionCover";
 import menu_bg from "../../../assets/menu/menu.jpg";
 import SectionHeading from "../../../components/shared/SectionHeading";
 import { useFetchMenus } from "../../../hooks/useFetchMenus";

@@ -1,4 +1,4 @@
-import SectionCover from "./SectionCover" 
+import SectionCover from "../../../components/shared/SectionCover" 
 import desserts_img from '../../../assets/menu/dessert-bg.jpeg'
 import { useFetchMenus } from "../../../hooks/useFetchMenus";
 import MenusSection from "./MenusSection";
