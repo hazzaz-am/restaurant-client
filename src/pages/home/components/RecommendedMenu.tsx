@@ -6,7 +6,7 @@ import ShopItem from "../../../components/shared/ShopItem";
 const RecommendedMenu = () => {
 	const [recommended, setRecommended] = useState([]);
 	useEffect(() => {
-		fetch("menu.json")
+		fetch("menus.json")
 			.then((res) => res.json())
 			.then((data) => {
 				const recommendedMenus = data.filter(

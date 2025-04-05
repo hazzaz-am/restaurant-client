@@ -9,7 +9,7 @@ const MenuItem = ({ img, name, recipe, price }: ItemType) => {
 				style={{
 					borderRadius: "0px 200px 200px 200px",
 				}}
-				className="w-[100px]"
+				className="w-20 xl:w-[100px]"
 			/>
 			<div>
 				<div className="flex justify-between items-center">
