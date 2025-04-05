@@ -1,9 +1,8 @@
 import SectionCover from "./SectionCover";
 import menu_bg from "../../../assets/menu/menu.jpg";
 import SectionHeading from "../../../components/shared/SectionHeading";
-import MenusCategory from "../../../components/shared/MenusCategory";
 import { useFetchMenus } from "../../../hooks/useFetchMenus";
-import PrimaryButton from "../../../components/ui/PrimaryButton";
+import MenusSection from "./MenusSection";
 
 const Offered = () => {
 	const [menus] = useFetchMenus("offered");
@@ -17,12 +16,7 @@ const Offered = () => {
 			/>
 			<div className="mt-32">
 				<SectionHeading heading="today's offer" subHeading="Don't miss" />
-				<div className="container mx-auto px-4">
-					<MenusCategory menus={Array.isArray(menus) ? menus : []} />
-				</div>
-				<div className="mt-11 text-center">
-					<PrimaryButton path="/our-shop">ORDER YOUR FAVOURITE FOOD</PrimaryButton>
-				</div>
+				<MenusSection menus={Array.isArray(menus) ? menus : []} />
 			</div>
 		</section>
 	);

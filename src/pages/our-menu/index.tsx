@@ -1,4 +1,5 @@
 import DynamicSiteTitle from "../../components/shared/DynamicSiteTitle";
+import Desserts from "./components/Desserts";
 import Offered from "./components/Offered";
 
 const MenuPage = () => {
@@ -7,6 +8,7 @@ const MenuPage = () => {
 			<DynamicSiteTitle title="Menu | Restaurant" />
 			<section>
 				<Offered />
+				<Desserts />
 			</section>
 		</>
 	);
