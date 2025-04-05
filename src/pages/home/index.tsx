@@ -1,3 +1,4 @@
+import DynamicSiteTitle from "../../components/shared/DynamicSiteTitle";
 import Banner from "./components/Banner";
 import CallToAction from "./components/CallToAction";
 import Category from "./components/Category";
@@ -9,16 +10,19 @@ import Testimonials from "./components/Testimonials";
 
 const HomePage = () => {
 	return (
-		<section>
-			<Banner />
-			<Category />
-			<ChefService/>
-			<PopularMenus/>
-			<CallToAction/>
-			<RecommendedMenu/>
-			<Featured/>
-			<Testimonials/>
-		</section>
+		<>
+			<DynamicSiteTitle title="Home | Restaurant" />
+			<section>
+				<Banner />
+				<Category />
+				<ChefService />
+				<PopularMenus />
+				<CallToAction />
+				<RecommendedMenu />
+				<Featured />
+				<Testimonials />
+			</section>
+		</>
 	);
 };
 export default HomePage;

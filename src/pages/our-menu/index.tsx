@@ -1,6 +1,10 @@
+import DynamicSiteTitle from "../../components/shared/DynamicSiteTitle"
+
 const MenuPage = () => {
   return (
-    <div>MenuPage</div>
-  )
+		<>
+			<DynamicSiteTitle title="Menu | Restaurant" />
+		</>
+	);
 }
 export default MenuPage
