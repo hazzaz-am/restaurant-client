@@ -1,6 +1,10 @@
+import DynamicSiteTitle from "../../../components/shared/DynamicSiteTitle";
+
 const SignInPage = () => {
   return (
-    <div>SignInPage</div>
-  )
+		<>
+			<DynamicSiteTitle title="Sign In" />
+		</>
+	);
 }
 export default SignInPage
