@@ -13,7 +13,7 @@ export const InputGroup = ({
 	placeholder,
 }: InputGroupProps) => {
 	return (
-		<div className="flex flex-col gap-4 mb-2">
+		<div className="flex flex-col mb-2">
 			<label htmlFor={name} className="text-[#444444] text-xl font-semibold">
 				{label}
 			</label>
