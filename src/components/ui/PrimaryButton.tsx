@@ -6,6 +6,7 @@ type ButtonProps = {
 	onButtonClick?: () => void;
 	classNames?: string;
 	path?: string;
+	
 };
 
 const variants = {
