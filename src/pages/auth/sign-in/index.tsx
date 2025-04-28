@@ -7,17 +7,19 @@ import { ReCaptcha } from "../../../components/shared/ReCaptcha";
 import { SocialAuth } from "../../../components/shared/SocialAuth";
 import { ChangeEvent, FormEvent, useState } from "react";
 import toast from "react-hot-toast";
+import { signupUserWithEmail } from "../../../features/auth/authThunks";
+import { useAppDispatch } from "../../../store/store";
 
 const INITIAL_USER = {
 	password: "",
 	email: "",
 }
 const SignInPage = () => {
-
 	const [user, setUser] = useState({ ...INITIAL_USER })
 	const [isVerified, setIsVerified] = useState(true)
 	const [emailError, setEmailError] = useState("")
 	const [passwordError, setPasswordError] = useState("")
+	const dispatch = useAppDispatch()
 
 	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const name = event.target.name
@@ -52,6 +54,13 @@ const SignInPage = () => {
 		}
 
 		console.log(user);
+		const resultAction = dispatch(signupUserWithEmail({ ...user }));
+
+		if (signupUserWithEmail.fulfilled.match(resultAction)) {
+			console.log("Signed up successfully:", resultAction.payload);
+		} else {
+			console.error("Signup failed:", resultAction);
+		}
 		setUser({ ...INITIAL_USER })
 
 	}

@@ -13,3 +13,9 @@ export type ItemType = {
 	recipe: string;
 	price: number;
 };
+
+export type UserType = {
+	name: string;
+	email: string;
+};
+

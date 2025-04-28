@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.7.0",
     "@smastrom/react-rating": "^1.5.0",
     "@tailwindcss/vite": "^4.0.17",
     "firebase": "^11.6.0",
@@ -18,6 +19,7 @@
     "react-helmet-async": "^2.0.5",
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
+    "react-redux": "^9.2.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router": "^7.4.0",
     "react-simple-captcha": "^9.3.1",
