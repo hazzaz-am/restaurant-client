@@ -5,36 +5,32 @@ import { InputGroup } from "../../../components/shared/InputGroup";
 import { AuthButton } from "../../../components/ui/AuthButton";
 import { ReCaptcha } from "../../../components/shared/ReCaptcha";
 import { SocialAuth } from "../../../components/shared/SocialAuth";
-import { ChangeEvent, FormEvent, useState } from "react";
-import toast from "react-hot-toast";
+import { useState } from "react";
 import { useAuth } from "../../../hooks/useAuth";
+import { SubmitHandler, useForm } from "react-hook-form";
 
-const INITIAL_USER = {
-	password: "",
-	email: "",
-}
+type FormData = {
+	email: string;
+	password: string;
+};
+
 const SignInPage = () => {
-	const [user, setUser] = useState({ ...INITIAL_USER })
 	const [isVerified, setIsVerified] = useState(true)
-	const [emailError, setEmailError] = useState("")
-	const [passwordError, setPasswordError] = useState("")
 	const auth = useAuth()
+
+	const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
 	if (!auth) {
 		return null
 	}
-
 	const { signInHandler } = auth
 
-	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-		const name = event.target.name
-		const value = event.target.value
+	const onSubmit: SubmitHandler<FormData> = data => {
+		signInHandler(data.email, data.password)
+			.then((result) => console.log(result))
+			.catch((error) => console.log(error))
+	};
 
-		setUser({
-			...user,
-			[name]: value
-		})
-	}
 
 	const handleVerification = (value: boolean) => {
 		if (value) {
@@ -42,29 +38,6 @@ const SignInPage = () => {
 		} else {
 			setIsVerified(false)
 		}
-	}
-
-	const handleFormSubmission = async (event: FormEvent<HTMLFormElement>) => {
-		event.preventDefault()
-		if (!user.email && !user.password) {
-			return toast.error('All Fields are required');
-		}
-
-		if (user.email === "") {
-			return setEmailError("Field can't be empty")
-		}
-
-		if (user.password === "") {
-			return setPasswordError("Field can't be empty")
-		}
-
-		console.log(user);
-		signInHandler(user.email, user.password)
-			.then((result) => console.log(result))
-			.catch((error) => console.log(error))
-
-		setUser({ ...INITIAL_USER })
-
 	}
 
 	return (
@@ -80,24 +53,25 @@ const SignInPage = () => {
 					</div>
 					<div className="md:w-1/2 p-10">
 						<h3 className="text-[40px] font-bold text-center">Sign In</h3>
-						<form className="mt-10" onSubmit={handleFormSubmission}>
-							<InputGroup
+						<form className="mt-10" onSubmit={handleSubmit(onSubmit)}>
+							<InputGroup<FormData>
 								type="email"
 								label="Email"
 								name="email"
 								placeholder="Type here"
-								value={user.email}
-								onHandleChange={handleInputChange}
-								errorMessage={emailError}
+								register={register}
+								errors={errors.email}
+								rules={{ required: "Email is required" }}
 							/>
-							<InputGroup
+							<InputGroup<FormData>
 								type="password"
 								label="Password"
 								name="password"
 								placeholder="Type here"
-								value={user.password}
-								errorMessage={passwordError}
-								onHandleChange={handleInputChange}
+								register={register}
+								errors={errors.password}
+								rules={{ required: "Password is required" }}
+
 							/>
 							<ReCaptcha name="captcha" placeholder="Enter captcha here" handleVerification={handleVerification} />
 							<AuthButton isVerified={isVerified}>Sign In</AuthButton>
