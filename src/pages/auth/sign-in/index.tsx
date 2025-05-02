@@ -7,8 +7,7 @@ import { ReCaptcha } from "../../../components/shared/ReCaptcha";
 import { SocialAuth } from "../../../components/shared/SocialAuth";
 import { ChangeEvent, FormEvent, useState } from "react";
 import toast from "react-hot-toast";
-import { signupUserWithEmail } from "../../../features/auth/authThunks";
-import { useAppDispatch } from "../../../store/store";
+import { useAuth } from "../../../hooks/useAuth";
 
 const INITIAL_USER = {
 	password: "",
@@ -19,7 +18,13 @@ const SignInPage = () => {
 	const [isVerified, setIsVerified] = useState(true)
 	const [emailError, setEmailError] = useState("")
 	const [passwordError, setPasswordError] = useState("")
-	const dispatch = useAppDispatch()
+	const auth = useAuth()
+
+	if (!auth) {
+		return null
+	}
+
+	const { signInHandler } = auth
 
 	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const name = event.target.name
@@ -39,7 +44,7 @@ const SignInPage = () => {
 		}
 	}
 
-	const handleFormSubmission = (event: FormEvent<HTMLFormElement>) => {
+	const handleFormSubmission = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 		if (!user.email && !user.password) {
 			return toast.error('All Fields are required');
@@ -54,13 +59,10 @@ const SignInPage = () => {
 		}
 
 		console.log(user);
-		const resultAction = dispatch(signupUserWithEmail({ ...user }));
+		signInHandler(user.email, user.password)
+			.then((result) => console.log(result))
+			.catch((error) => console.log(error))
 
-		if (signupUserWithEmail.fulfilled.match(resultAction)) {
-			console.log("Signed up successfully:", resultAction.payload);
-		} else {
-			console.error("Signup failed:", resultAction);
-		}
 		setUser({ ...INITIAL_USER })
 
 	}

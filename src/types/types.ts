@@ -15,7 +15,7 @@ export type ItemType = {
 };
 
 export type UserType = {
-	name: string;
+	displayName: string;
 	email: string;
 };
 
